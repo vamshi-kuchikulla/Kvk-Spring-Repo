@@ -1,0 +1,13 @@
+package com.spring.service;
+
+import com.spring.dao.StudentDAO;
+import com.spring.model.Student;
+
+public class StudentServiceImpl implements StudentService {
+    
+	private StudentDAO studentDAO;
+	
+	public void addStudent(Student student) {
+		studentDAO.addStudent(student);
+	}
+}

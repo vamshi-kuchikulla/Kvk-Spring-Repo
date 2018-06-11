@@ -1,0 +1,39 @@
+package com.spring.dao;
+
+import java.util.List;
+
+import com.spring.model.Employee;
+
+public class EmployeeDAOImpl implements EmployeeDAO {
+
+	@Override
+	public void createEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Employee getEmployeeById(int employeeId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteEmployeeById(int employeeId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateEmployeeEmailById(String newEmail, int employeeId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Employee> getAllEmployeesDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

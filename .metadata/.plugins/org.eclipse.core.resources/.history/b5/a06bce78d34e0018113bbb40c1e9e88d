@@ -1,0 +1,17 @@
+package com.lambda;
+
+public class GreetingTest {
+	
+	public void greet() {
+		System.out.println("hello world");
+	}
+	
+//	String greet1 = () -> {
+//		System.out.println("hello Lambda");
+//	};
+	
+	public static void main(String[] args) {
+		GreetingTest g  = new GreetingTest();
+		g.greet();
+	}
+}

@@ -1,0 +1,48 @@
+package com.spring.dao;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.spring.model.Employee;
+
+public class EmployeeDAOImpl implements EmployeeDAO {
+	
+	private JdbcTemplate jdbcTemplate;
+	
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	@Override
+	public void createEmployee(Employee employee) {
+		
+		
+	}
+
+	@Override
+	public Employee getEmployeeById(int employeeId) {
+		String SQL="SELECT *FROM emp WHERE id=?";
+		Employee employee = jdbcTemplate.queryForObject(SQL, new EmployeeRowMapper(), employeeId);
+		return employee;
+	}
+
+	@Override
+	public void deleteEmployeeById(int employeeId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateEmployeeEmailById(String newEmail, int employeeId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Employee> getAllEmployeesDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

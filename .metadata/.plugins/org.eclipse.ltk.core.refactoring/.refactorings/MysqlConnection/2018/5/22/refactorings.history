@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.mysql.SingeltonDB.java&apos; to &apos;SingeltonDBConnection.java&apos;&#x0D;&#x0A;- Original project: &apos;MysqlConnection&apos;&#x0D;&#x0A;- Original element: &apos;com.mysql.SingeltonDB.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.mysql.SingeltonDBConnection.java&apos;" description="Rename compilation unit &apos;SingeltonDB.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.mysql{SingeltonDB.java" name="SingeltonDBConnection.java" references="false" stamp="1527680695321" version="1.0"/>
+</session>

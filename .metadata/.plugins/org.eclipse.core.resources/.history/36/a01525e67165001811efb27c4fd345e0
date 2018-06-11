@@ -1,0 +1,27 @@
+package com.spring.dao;
+
+import org.springframework.orm.hibernate5.HibernateTemplate;
+
+import com.spring.model.Student;
+
+public class StudentDAOImpl  implements StudentDAO{
+	
+	private HibernateTemplate hibernateTemplate;
+	
+	/**
+	 * @param hibernateTemplate the hibernateTemplate to set
+	 */
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
+	}
+	
+
+	@Override
+	public void addStudent(Student s) {
+			//String SQL = "insert into test.student (id,name,email, age) values(?,?,?,?)";
+			//int update = jdbcTemplate.update(SQL, s.getId(), s.getName(), s.getEmail(), s.getAge());
+		
+			 hibernateTemplate.save(s);
+			System.out.println("Student insertted !!!!!!"+s);	
+	}	
+}

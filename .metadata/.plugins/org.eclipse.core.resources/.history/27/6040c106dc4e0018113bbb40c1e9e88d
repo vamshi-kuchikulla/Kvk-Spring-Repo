@@ -1,0 +1,23 @@
+package com.lambda;
+
+public class GreetingTest {
+	
+	public void greet() {
+		System.out.println("hello world");
+	}
+	
+	public void greet(GreetImpl grt) {
+		grt.greet();
+	}
+	
+//	String greet1 = () -> {
+//		System.out.println("hello Lambda");
+//	};
+	
+	public static void main(String[] args) {
+		GreetingTest g  = new GreetingTest();
+		GreetImpl gi = new GreetImpl();
+		g.greet();
+		g.greet(gi);
+	}
+}

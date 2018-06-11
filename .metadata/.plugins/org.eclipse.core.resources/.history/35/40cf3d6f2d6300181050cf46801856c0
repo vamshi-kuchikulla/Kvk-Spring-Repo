@@ -1,0 +1,14 @@
+package com.spring.client;
+
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class Test {
+	public static void main(String[] args) {
+		ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("Beans.xml");
+
+		
+		ctx.close();
+	}
+}

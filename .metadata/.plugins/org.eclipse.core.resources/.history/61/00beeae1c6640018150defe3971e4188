@@ -1,0 +1,39 @@
+package com.spring.client;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.spring.model.Employee;
+import com.spring.service.EmployeeService;
+import com.spring.service.EmployeeServiceImpl;
+
+public class Test {
+	public static void main(String[] args) {
+
+		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("Beans.xml");
+		EmployeeService employeeService = ctx.getBean("employeeService", EmployeeServiceImpl.class);
+
+		
+		createEmployee(employeeService);
+		getEmployeeById(employeeService);
+		ctx.close();
+
+	}
+
+	private static void createEmployee(EmployeeService employeeService) {
+		Employee e = new Employee();
+		e.setEmpId(105);
+		e.setEmpName("adi");
+		e.setEmail("k@vmail.com");
+		e.setSalary(960000);
+		e.setAge(32);
+		employeeService.addEmployee(e);
+		
+	}
+
+	private static void getEmployeeById(EmployeeService employeeService) {
+		Employee employee = employeeService.fetchEmployee(102);
+		System.out.println(employee.getEmpId() + "\t" + employee.getEmpName() + "\t" + employee.getEmail() + "\t"
+				+ employee.getAge() + "\t" + employee.getSalary());
+	}
+}

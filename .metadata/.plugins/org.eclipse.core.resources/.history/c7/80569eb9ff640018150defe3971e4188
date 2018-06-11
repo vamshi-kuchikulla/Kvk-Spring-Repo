@@ -1,0 +1,23 @@
+package com.spring.dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.spring.model.Student;
+
+public class StudentDAOImpl  implements StudentDAO{
+	private JdbcTemplate jdbcTemplate;
+	
+	/**
+	 * @param jdbcTemplate the jdbcTemplate to set
+	 */
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	@Override
+	public void addStudent(Student student) {
+			
+	}
+
+	
+}

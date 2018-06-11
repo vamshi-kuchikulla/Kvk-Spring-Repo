@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=SpringBeanLifeCycle/D:\/jars\/spring-framework-5.0.6.RELEASE\/libs\/spring-beans-5.0.6.RELEASE.jar&lt;org.springframework.beans.factory.config(PropertyPlaceholderConfigurer.class[PropertyPlaceholderConfigurer" modifiers="33" timestamp="1525746962000"/>
+<typeInfo handle="=SpringAnnotation/D:\/jars\/spring-framework-5.0.6.RELEASE\/libs\/spring-orm-5.0.6.RELEASE.jar&lt;org.springframework.orm.hibernate5(HibernateTemplate.class[HibernateTemplate" modifiers="33" timestamp="1525747048000"/>
+</typeInfoHistroy>

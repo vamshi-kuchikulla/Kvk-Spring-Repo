@@ -1,0 +1,50 @@
+package com.spring.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.orm.hibernate5.HibernateTemplate;
+
+import com.spring.model.Student;
+
+public class StudentDAOImpl  implements StudentDAO{
+	
+	private SessionFactory sessionFactory;
+	
+	private HibernateTemplate hibernateTemplate;
+	
+	/**
+	 * @param hibernateTemplate the hibernateTemplate to set
+	 */
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
+	}
+	
+
+	@Override
+	public void addStudent(Student s) {
+			//String SQL = "insert into test.student (id,name,email, age) values(?,?,?,?)";
+			//int update = jdbcTemplate.update(SQL, s.getId(), s.getName(), s.getEmail(), s.getAge());
+		
+			 hibernateTemplate.save(s);
+			 try(Session session =  ){
+				 
+			 }
+			System.out.println("Student insertted !!!!!!"+s);	
+	}
+
+
+	@Override
+	public Student getStudentById(int Id) {
+		return null;
+	}
+
+
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}	
+}

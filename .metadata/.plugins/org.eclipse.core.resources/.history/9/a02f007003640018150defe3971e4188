@@ -1,0 +1,26 @@
+package com.mysql;
+
+import java.sql.Connection;
+
+public class SingeltonDBConnection {
+
+	private static SingeltonDBConnection con;
+	private Connection connection;
+	private String driver = "com.mysql.jdbc.Driver";
+	private String url = "jdbc:mysql://localhost:3306/";
+	private String dbName = "test";
+	private String userName = "root";
+	private String password = "root";
+
+	private SingeltonDBConnection() {
+		
+	}
+
+	public SingeltonDBConnection getConnection() {
+		if (con == null) {
+			con = new SingeltonDBConnection();
+		}
+		return con;
+	}
+
+}

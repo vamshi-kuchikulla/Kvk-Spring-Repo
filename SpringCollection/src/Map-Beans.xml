@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd"
+	default-init-method="init" default-destroy-method="destroy">
+
+	<context:annotation-config />
+	<bean id="empInfo" class="com.spring.model.EmpInfo">
+		<property name="companyInfo">
+			<map>
+				<entry key="1111 " value="Kishan"></entry>
+				<entry key="2222 " value="Sean"></entry>
+				<entry key="3333 " value="John"></entry>
+			</map>
+		</property>
+		<property name="empInfo">
+		   <map>
+		       <entry key ="1001" value-ref="employee1"></entry>
+		       <entry key ="1002" value-ref="employee2"></entry>
+		       <entry key ="1003" value-ref="employee3"></entry>
+		   </map>
+		</property>
+	</bean>
+
+	<bean id="employee1" class="com.spring.model.Employee">
+		<property name="empId" value="1111"></property>
+		<property name="empName" value="Jimmy"></property>
+		<property name="email" value="j@gmail.com"></property>
+		<property name="gender" value="Male"></property>
+	</bean>
+
+	<bean id="employee2" class="com.spring.model.Employee">
+		<property name="empId" value="2222"></property>
+		<property name="empName" value="Sean"></property>
+		<property name="email" value="s@gmail.com"></property>
+		<property name="gender" value="Male"></property>
+	</bean>
+
+	<bean id="employee3" class="com.spring.model.Employee">
+		<property name="empId" value="3333"></property>
+		<property name="empName" value="Dave"></property>
+		<property name="email" value="d@gmail.com"></property>
+		<property name="gender" value="Male"></property>
+	</bean>
+</beans>
